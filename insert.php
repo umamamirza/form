@@ -1,5 +1,7 @@
+
 <?php
 include('dbConnection.php');
+
 
 $name = isset($_POST['name']) ? $_POST['name'] : '';
 $email = isset($_POST['email']) ? $_POST['email'] : '';
@@ -14,9 +16,6 @@ if (!empty($name) && !empty($email) && !empty($password)) {
     echo "Unable to Save Student: ". $conn->error;
 }
 }
-$sql = "SELECT * FROM students"; 
- $result = $conn->query($sql);
 
- 
 $conn->close();
 ?>
